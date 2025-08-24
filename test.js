@@ -30,4 +30,4 @@ console.log(username);
 })();
 
 // loops
-
+// for, do, while
