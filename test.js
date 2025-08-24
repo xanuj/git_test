@@ -24,10 +24,37 @@ arrow_function();
 const {name:username}=JsUser
 console.log(username);
 
+
+
 //iife 
 (function chai(){
     console.log("hello world")
 })();
 
+
+
+
 // loops
 // for, do, while
+/*
+let arr=['flash','batman','superman']
+for(let i=0;i<3;i++){
+    console.log(arr[i])
+}
+
+let var1=0;
+while(var1<3){
+    console.log(arr[var1])
+    var1++
+}
+var1=0
+do{
+    console.log(arr[var1])
+    var1++
+}while(var1<3)
+    */
+
+
+
+
+
