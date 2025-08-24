@@ -1,6 +1,22 @@
-let email=String("anujsaini121314@gmail.com");
-console.log(typeof(email));
-let url= new String("https://stackoverflow.com/questions/66168985/how-to-change-folder-that-opened-by-default-in-vscode")
-console.log(url.replaceAll('-','%20'))
-const part=url.split("/")
-console.log(part)
+const mysym=Symbol("key1")
+const JsUser={
+    name: "Anuj",
+    age: 21,
+    "my name" :"Anuj saini",
+    email: "anujsaini121314@gmail.com",
+    [mysym] :"mykey1",
+    greeting : function(){
+        console.log(`welcome ${this["my name"]}`)
+    }
+}
+// const JsUser2={
+//     address: "address"
+// }
+// const js2=Object.assign({},JsUser,JsUser2)
+// console.log(js2)
+
+// const {["my name"]:myname} =JsUser
+// console.log(myname)
+Object.freeze(JsUser)
+JsUser["my name"]="not known"
+JsUser.greeting();
