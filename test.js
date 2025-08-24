@@ -57,15 +57,60 @@ for(let i=0;i<3;i++){
            
            
 let arr=['flash','batman','superman']
-for (const num of arr) {
-    console.log(`each value of arr : ${num}`)
-}
+// for (const num of arr) {
+//     console.log(`each value of arr : ${num}`)
+// }
 
 let greeting="World!"
-for (const num of greeting) {
-    console.log(`each value of greeting : ${num}`)
-}
+// for (const num of greeting) {
+//     console.log(`each value of greeting : ${num}`)
+// }
 
 
+// //map 
+const map1 = new  Map();
+map1.set('a',1);
+map1.set('b',2);
+map1.set('c',3);
+
+// console.log(map1)
+// for (const [key,value] of map1) {
+//     console.log(`key of map1 : ${key}`)
+//     console.log(`value of map1 : ${value}`)
+// }
+const myObject =new Object()
+myObject.js="javasript"
+myObject.cpp="c++"
+myObject.rb="rubby"
+myObject.swift="swift by apple"
+
+// console.log(myObject)
+// for (const key in myObject) {
+//     console.log(`${key} :- ${ myObject[key]}`)
+// }
 
 
+ const array=["js","rubby","cpp","java"]
+//  array.forEach((item,index,arr) => {console.log(item,index,arr)})
+
+const mycoding=[
+    {
+        languageName:"javaScript",
+        languageFileName:"js"
+    },
+    {
+        languageName:"c++",
+        languageFileName:"cpp"
+    },
+    {
+        languageName:"java",
+        languageFileName:"java"
+    }
+]
+
+// mycoding.forEach((item)=>{
+//     console.log(item.languageName,item.languageFileName)
+// })
+
+
+//loops end here
