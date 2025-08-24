@@ -1,3 +1,4 @@
+/*
 const mysym=Symbol("key1")
 const JsUser={
     name: "Anuj",
@@ -32,7 +33,7 @@ console.log(username);
 })();
 
 
-
+*/
 
 // loops
 // for, do, while
@@ -40,20 +41,30 @@ console.log(username);
 let arr=['flash','batman','superman']
 for(let i=0;i<3;i++){
     console.log(arr[i])
+    }
+    
+    let var1=0;
+    while(var1<3){
+        console.log(arr[var1])
+        var1++
+        }
+        var1=0
+        do{
+            console.log(arr[var1])
+            var1++
+            }while(var1<3)
+            */
+           
+           
+let arr=['flash','batman','superman']
+for (const num of arr) {
+    console.log(`each value of arr : ${num}`)
 }
 
-let var1=0;
-while(var1<3){
-    console.log(arr[var1])
-    var1++
+let greeting="World!"
+for (const num of greeting) {
+    console.log(`each value of greeting : ${num}`)
 }
-var1=0
-do{
-    console.log(arr[var1])
-    var1++
-}while(var1<3)
-    */
-
 
 
 
