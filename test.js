@@ -114,3 +114,19 @@ const mycoding=[
 
 
 //loops end here
+
+const myNums =[1,2,3,4,5,6,7,8,9,10]
+const newNums=myNums.filter((value)=> value>4)
+console.log(newNums)
+const newNum=myNums.map((value)=> value+10)
+console.log(newNum)
+
+//chaining
+const newNum2=myNums
+            .map((value)=> value+10)
+            .map((value)=>value+1)
+            .filter((value)=>  value>=15)
+console.log(newNum2)
+
+const myTotal=myNums.reduce((acc,curr)=>acc+curr,0)
+console.log(myTotal)
