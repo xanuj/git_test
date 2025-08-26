@@ -3,6 +3,6 @@ const clock=document.getElementById("clock")
 setInterval(() => {
     const date=new Date()
     clock.innerHTML=date.toLocaleString()
-    connsole.log(date.toLocaleString())
+    console.log(date.toLocaleString())
     // clock.replaceWith(newtime)
 }, 1000);
