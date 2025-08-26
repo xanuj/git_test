@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <h2>Content</h2>
+</body>
+    <script>
+        const temp=document.getElementsByTagName("h2")
+        // let changeMe;
+        // function sayMyName(){
+        //     temp[0].textContent="Anuj"
+        // }
+        // // console.log("11")
+        // document.getElementById("stop").addEventListener("click",(e)=>{
+        //     clearTimeout(changeMe)
+        //     const temp=document.getElementsByTagName("h2")
+        //     // console.log()
+        //     temp[0].textContent="Stop pressed"
+        //     changeMe=setTimeout(sayMyName,2000)
+        // })
+
+        // const setDate=function(...arr){
+        //     temp[0].textContent=`${arr} ${Date.now()}`
+        // }
+        // let intervalId=null;
+        // document.getElementById("start").addEventListener('click',function(){
+        //     if(intervalId===null)
+        //      intervalId=setInterval(setDate,1000,"27 ","aug 25")
+        //     else{
+        //         clearInterval(intervalId)
+        //         intervalId=setInterval(setDate,1000,"27 ","aug 25")
+        //     }
+
+        // })
+        // document.getElementById("stop").addEventListener('click',function(){
+        //     clearInterval(intervalId)
+        //     temp[0].textContent="stop Pressed";
+        //     intervalId=null;
+        //     // console.log(intervalId)
+        // })
+        
+        const body=document.querySelector("body");
+        function getColor(){
+            const hex="0123456789ABCDEF";
+            let color="#";
+            for(let i=0;i<6;i++){
+                const num=Math.floor(Math.random() * 16);
+                color+=hex[num]
+            } 
+            // console.log(color)
+            return color;
+        }
+        const setcolor=function(){
+            body.style.backgroundColor=getColor();
+        }
+        const removeColor=function(){
+            body.style.backgroundColor="white";
+        }
+        let changeBG=null;
+        
+        document.getElementById("start").addEventListener('click',function(){
+            if(changeBG==null){
+                body.style.backgroundColor=getColor();
+                changeBG=setInterval(setcolor,1000)
+                document.getElementsByTagName("h2")[0].textContent="Changing background color"
+            }
+            // console.log(genColor())
+            // body.style.backgroundColor=genColor();
+            // console.log(body.style.backgroundColor)
+        })
+        document.getElementById("stop").addEventListener('click',function(){
+            // console.log(genColor())
+            // console.log(body.style.backgroundColor)
+            if(changeBG!=null){
+                clearInterval(changeBG)
+                removeColor()
+                document.getElementsByTagName("h2")[0].textContent="Stopped, FINALLY!!"
+                changeBG=null;
+            } 
+            
+
+        })
+
+        
+    </script>
+</html>
