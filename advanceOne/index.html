@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+    <h1>Profile info</h1>
+    <form >
+        <input id="urlname" type="text">
+        <p><button id="url" type="submit">Search</button></p>
+    </form>
+    <div class="User">
+        <h2 id="name"></h2>
+        <img id="profileImg" width ="200px" src="" alt="">
+        <p id="followCount"><b>Followers : </b>0</p>
+
+        
+
+
+    </div>
+
+</body >
+<script>
+    const xhr=new XMLHttpRequest();
+    let urlName=null;
+    const form=document.querySelector("form")
+    form.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        urlName=(document.getElementById("urlname").value)
+        console.log(typeof urlName)
+        const requestUrl=`https://api.github.com/users/${urlName}`;
+        xhr.open('GET',requestUrl)
+        xhr.onreadystatechange=function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState ===4) {
+            const data=JSON.parse(this.responseText)
+            document.getElementById("name").textContent=data["login"];
+            document.getElementById("followCount").innerHTML=`<b>Followers : </b> ${data["followers"]}`;
+            const imgUrl=data["avatar_url"]
+            document.getElementById("profileImg").src=imgUrl
+            document.getElementById("urlname").value=''
+
+        }
+    }
+    xhr.send()
+
+    })
+
+    
+</script>
+</html>
